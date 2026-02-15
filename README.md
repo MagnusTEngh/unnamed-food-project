@@ -28,7 +28,6 @@ To launch backend api, run this command from the backend folder: uv run fastapi 
 
 ### Backend
 
-
 Feature based structure.
 
 - Each feature has its own folder
