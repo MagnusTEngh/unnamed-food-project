@@ -3,6 +3,7 @@
 from db.base import Base
 from core.database import engine
 
+from modules.food import models
 from modules.nutrients import models
 from modules.test import models
 
