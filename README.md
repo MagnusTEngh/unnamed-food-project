@@ -2,12 +2,19 @@
 
 ## How to work with
 
+### Requirements
+
+- uv
+- docker
+
 Make an .env file in the root folder.
 
 POSTGRES_USER=
 POSTGRES_PASSWORD=
 POSTGRES_DB=
 SECRET_KEY=not implemented
+
+Move to /backend and run 'uv venv' to install uv environment.
 
 To establish database:
 
