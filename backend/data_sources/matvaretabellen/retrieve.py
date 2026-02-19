@@ -76,12 +76,7 @@ def get_foods():
             default_measurement="To be determined",
         )
         db.add(
-            Food(
-                source=fooditem.source,
-                owned_by=fooditem.owned_by,
-                name=fooditem.name,
-                default_measurement=fooditem.default_measurement,
-            )
+            fooditem.to_sqlalchemy()
         )
         db.commit()
     except IntegrityError as e:
@@ -104,12 +99,7 @@ def get_foods():
                 amount=nutrient["quantity"],
             )
             db.add(
-                FoodNutrition(
-                    food=nutrition_item.food,
-                    nutrient=nutrition_item.nutrient,
-                    measurement=nutrition_item.measurement,
-                    amount=nutrition_item.amount,
-                )
+                nutrition_item.to_sqlalchemy(source=SOURCE)
             )
             db.commit()
         except IntegrityError as e:
