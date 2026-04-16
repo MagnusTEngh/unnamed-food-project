@@ -26,3 +26,12 @@ def get_specific_test_message(message_no):
     if message_no:
         return {"content": TEST_MESSAGES[int(message_no)]}
 
+@router.get("/message/from")
+def get_message_from():
+    """This should be found at /api/test/message/from"""
+    return {"Listen": "Someone wants to talk"}
+
+@router.get("/message/from/thedan")
+def get_message_from_daniel():
+    """This should be found at /api/test/message/from/thedan"""
+    return {"thedan": "You shall be doomed"}
